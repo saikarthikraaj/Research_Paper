@@ -1,332 +1,176 @@
-# 🔋 AI-Based EV Battery Health Monitoring and Failure Prediction System
+Yes bro 👍 This is a good **medium-length README** — not too short, not too long, and suitable for your GitHub academic project.
 
-## 📌 Project Overview
+```markdown
+# 🔋 AI-Based EV Battery Health Monitoring and Failure Prediction
 
-The **AI-Based EV Battery Health Monitoring and Failure Prediction System** is a software-based Machine Learning project designed to analyze Electric Vehicle (EV) battery and vehicle parameters and predict battery failure risk.
+## 📌 Overview
 
-The system uses an EV predictive-maintenance dataset and Machine Learning to classify the condition as **Normal** or **Failure Risk**.
+This project uses **Machine Learning and Deep Learning** techniques to analyze Electric Vehicle (EV) battery data and predict battery health conditions.
 
-The project will later integrate the trained model with a **FastAPI backend** and **React frontend** to create an interactive EV battery monitoring dashboard.
+The system performs two main tasks:
 
-> **Note:** This is a completely software-based project. No Arduino, ESP32, IoT sensors, or physical battery hardware are used.
+- 🔴 **Battery Failure Prediction** – identifies whether a battery is healthy or at risk of failure.
+- 🔋 **Remaining Useful Life Prediction** – estimates the remaining battery life in charge/discharge cycles.
+
+Different Machine Learning models are trained and compared to identify the best-performing models.
 
 ---
 
 ## 🎯 Objectives
 
 - Analyze EV battery and vehicle parameters.
-- Predict battery failure risk using Machine Learning.
-- Monitor battery parameters such as SoC, SoH, voltage, current, and temperature.
-- Provide AI-based failure prediction.
-- Display battery health and failure-risk analytics through a web dashboard.
+- Predict battery failure risk.
+- Predict remaining battery life cycles.
+- Compare Machine Learning and ANN models.
+- Evaluate model performance using different metrics.
+- Build a foundation for a future web-based EV battery prediction system.
+
+---
+
+## 🤖 Models Used
+
+### Classification
+
+- Random Forest
+- Extra Trees
+- HistGradientBoosting
+- Artificial Neural Network (ANN)
+
+### Regression
+
+- Random Forest
+- Extra Trees
+- HistGradientBoosting
+- Artificial Neural Network (ANN)
+
+---
+
+## 🏆 Best Results
+
+### Battery Failure Classification
+
+**Best Model: HistGradientBoosting**
+
+| Metric | Result |
+|---|---:|
+| Accuracy | **96.58%** |
+| Precision | 84.54% |
+| Recall | **80.42%** |
+| F1 Score | **82.43%** |
+| Log Loss | **0.0790** |
+
+### Remaining Life Prediction
+
+**Best Model: Extra Trees**
+
+| Metric | Result |
+|---|---:|
+| MAE | 48.82 cycles |
+| RMSE | **110.41 cycles** |
+| R² Score | **0.99629** |
 
 ---
 
 ## 📊 Dataset
 
-The project uses the **EV Predictive Maintenance Dataset**.
+The dataset contains EV-related parameters such as:
 
-- **Records:** 175,393
-- **Columns:** 30
-- **Target:** `Failure_Probability`
+- Battery capacity
+- State of Charge (SoC)
+- State of Health (SoH)
+- Cycle count
+- Cell voltage
+- Cell temperature
+- Charging information
+- Driving information
+- Environmental conditions
+- Battery stress and health indicators
 
-### Target Classes
+The complete dataset is stored separately because of its large size.
 
-- `0` → Normal
-- `1` → Failure Risk
-
-### Important Features
-
-- SoC
-- SoH
-- Battery Voltage
-- Battery Current
-- Battery Temperature
-- Charge Cycles
-- Motor Temperature
-- Motor Vibration
-- Motor RPM
-- Power Consumption
-- Driving Speed
-- Distance Traveled
-- RUL
-- Failure Probability
-- Component Health Score
-
-### 📥 Dataset Drive Link
-
-**[Open Dataset – Google Drive](https://drive.google.com/drive/folders/1cRFmzwrAREaE-g6LdtkXo8LhXM3LLUdv?usp=drive_link)**
-
----
-
-## 🤖 Machine Learning
-
-Several classification models were tested:
-
-1. Logistic Regression
-2. Scaled Logistic Regression
-3. HistGradientBoostingClassifier
-4. HistGradientBoostingClassifier with Class Balancing
-
-### 🏆 Final Model
-
-**HistGradientBoostingClassifier with class balancing**
-
-The model uses **24 input features** to predict:
-
-**Normal / Failure Risk**
-
-### Model Performance
-
-| Metric | Score |
-|---|---:|
-| Accuracy | 59.58% |
-| Precision | 10.33% |
-| Recall | 40.25% |
-| F1-Score | 16.44% |
-| Log Loss | 0.689 |
-
-### Saved Model Files
-
-```text
-battery_failure_model.pkl
-battery_features.pkl
-````
-
----
-
-## 📈 Data & Model Visualizations
-
-The project includes:
-
-* Failure Risk Distribution
-* Model Performance Comparison
-* Confusion Matrix
-* SoH Distribution
-* Battery Temperature Distribution
-* SoH vs Battery Temperature
-
----
-
-## 🌐 Web Application
-
-The trained Machine Learning model will be integrated into a web application using:
-
-**React → FastAPI → Machine Learning Model**
-
-### Planned Pages
-
-* Dashboard
-* Battery Analysis
-* AI Prediction
-* Analytics
-* Alerts
-* Model Performance
-* About
-
-### Dashboard
-
-The dashboard will display:
-
-* State of Health (SoH)
-* State of Charge (SoC)
-* Battery Temperature
-* Failure Risk
-* Battery Voltage
-* Battery Current
-* Charge Cycles
-* Motor Temperature
-* Power Consumption
-* Battery health charts
-* Failure-risk charts
-
-### AI Prediction
-
-Users will enter battery and vehicle parameters.
-
-The data will be sent to the FastAPI backend, which will use the trained Machine Learning model to return:
-
-**Normal** or **Failure Risk**
-
----
-
-## 🏗️ System Workflow
-
-```text
-EV Predictive Maintenance Dataset
-              ↓
-       Data Preprocessing
-              ↓
-        Feature Selection
-              ↓
-       Machine Learning
-              ↓
-        Model Evaluation
-              ↓
-       Trained ML Model
-              ↓
-        FastAPI Backend
-              ↓
-         React Frontend
-              ↓
-      EV Battery Dashboard
-```
-
----
-
-## 🛠️ Technology Stack
-
-### Machine Learning
-
-* Python
-* Pandas
-* NumPy
-* Scikit-learn
-* Matplotlib
-* Seaborn
-* Jupyter Notebook
-
-### Backend
-
-* Python
-* FastAPI
-* Uvicorn
-* Joblib
-
-### Frontend
-
-* React
-* JavaScript
-* HTML
-* CSS
-
-### Tools
-
-* VS Code
-* Jupyter Notebook
-* Git
-* GitHub
-
----
-
-## 📁 Project Structure
-
-```text
-EVProject/
-│
-├── battery.ipynb
-├── battery_failure_model.pkl
-├── battery_features.pkl
-│
-├── backend/
-│   └── main.py
-│
-└── frontend/
-    └── React Application
-```
-
-The large dataset is stored separately on Google Drive.
+📥 **Dataset:**  
+[Google Drive Dataset](https://drive.google.com/drive/folders/1cRFmzwrAREaE-g6LdtkXo8LhXM3LLUdv?usp=drive_link)
 
 ---
 
 ## 📚 Research Papers
 
-Research papers related to EV battery health, State of Charge (SoC), State of Health (SoH), battery degradation, Machine Learning, Deep Learning, and Battery Management Systems are used as references for this project.
+Research papers related to:
 
-### 📖 Research Papers Drive Link
+- EV Battery Management Systems
+- Battery State of Charge
+- Battery State of Health
+- Machine Learning for Battery Prediction
+- Deep Learning for Battery Health Estimation
 
-**[Open Research Papers – Google Drive](https://drive.google.com/drive/folders/1heVwKE3r1Kocon-JM1tv4IdILVGsxuYb)**
+were studied as part of this project.
 
----
-
-## 🔬 Research Areas
-
-The collected research papers cover areas such as:
-
-* EV Battery SoC Estimation
-* EV Battery SoH Estimation
-* Lithium-Ion Battery Health Prediction
-* Battery Degradation
-* Machine Learning for Battery Prediction
-* Deep Learning for Battery Prediction
-* Battery Management Systems
-* Battery Failure Prediction
-* Predictive Maintenance
+📄 **Research Papers:**  
+[Google Drive Research Papers](https://drive.google.com/drive/folders/1cRFmzwrAREaE-g6LdtkXo8LhXM3LLUdv?usp=drive_link)
 
 ---
 
-## ✅ Project Status
+## 📓 Jupyter Notebook
 
-### Completed
+The complete Machine Learning implementation is available in:
 
-* [x] Dataset Collection
-* [x] Dataset Analysis
-* [x] Data Preprocessing
-* [x] Feature Selection
-* [x] Model Training
-* [x] Model Comparison
-* [x] Model Evaluation
-* [x] Confusion Matrix
-* [x] Data Visualization
-* [x] Model Saving
-* [x] Research Paper Collection
-
-### In Progress
-
-* [ ] FastAPI Backend
-* [ ] Prediction API
-* [ ] React Frontend
-* [ ] Dashboard
-* [ ] AI Prediction Page
-* [ ] Analytics Page
-* [ ] Alerts Page
-* [ ] Model Performance Page
-
----
-
-## 🔮 Future Enhancements
-
-* Improve model performance
-* Add Remaining Useful Life (RUL) prediction
-* Add battery degradation prediction
-* Add anomaly detection
-* Add additional datasets
-* Deploy the application to the cloud
-* Implement automatic model retraining
-
----
-
-## ⚠️ Project Scope
-
-This project is completely software-based.
-
-It does **not** use:
-
-* Arduino
-* ESP32
-* IoT sensors
-* Physical EV batteries
-* Hardware-based data collection
-
-The system uses an existing EV dataset for Machine Learning analysis and prediction.
-
----
-
-### GitHub
-
-**[GitHub Profile](https://github.com/saikarthikraaj)**
-
-### Project Repository
-
-**[Research Paper Repository](https://github.com/saikarthikraaj/Research_Paper)**
-
----
-
-## 📄 License
-
-This project is developed for **educational and research purposes**.
-
+```text
+EV_ML_Training/EV_ML_Model.ipynb
 ```
 
-This version is ready to paste directly into your **GitHub `README.md`**.
+The notebook includes:
+
+- Data loading
+- Data preprocessing
+- Feature selection
+- Missing-value handling
+- Model training
+- Model evaluation
+- Model comparison
+- Data visualization
+- Battery prediction
+
+---
+
+## 🛠️ Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- TensorFlow / Keras
+- Matplotlib
+- Seaborn
+- Jupyter Notebook
+- Git & GitHub
+
+---
+
+## 🚀 Future Scope
+
+The trained models can be integrated into a **React + FastAPI web application** that provides:
+
+- Battery health prediction
+- Failure probability
+- Remaining life prediction
+- Interactive charts
+- User-friendly battery analysis dashboard
+
+---
+
+## 📂 Project Structure
+
+```text
+Research_Paper/
+│
+├── EV_ML_Training/
+│   └── EV_ML_Model.ipynb
+│
+├── Research Papers
+│
+└── README.md
 ```
+
+---
+
+This version is probably the **best balance for your repository**: enough technical information for seniors/reviewers, but not unnecessarily huge.
