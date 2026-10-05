@@ -312,13 +312,6 @@ The system uses an existing EV dataset for Machine Learning analysis and predict
 
 ---
 
-## 👨‍💻 Author
-
-**Sai Karthik Raaj A**
-
-Computer Science Engineering Student
-**St. Joseph's College of Engineering, Chennai**
-
 ### GitHub
 
 **[GitHub Profile](https://github.com/saikarthikraaj)**
