@@ -1,59 +1,46 @@
-# AI-Based EV Battery Health and Failure Prediction System
+# 🔋 AI-Based EV Battery Health Monitoring and Failure Prediction System
 
-## Project Overview
+## 📌 Project Overview
 
-This project is an AI-based web application for analyzing Electric Vehicle (EV) battery health and predicting potential battery failure risks using Machine Learning.
+The **AI-Based EV Battery Health Monitoring and Failure Prediction System** is a software-based machine learning project designed to analyze Electric Vehicle (EV) battery and vehicle parameters and predict the possibility of battery failure.
 
-The system uses battery and vehicle-related data to train a Machine Learning model. The trained model is integrated with a FastAPI backend and React frontend to provide battery health analysis and prediction through a web interface.
+The system uses a dataset containing EV battery, motor, vehicle, environmental, and maintenance-related parameters. Machine Learning is used to classify whether the vehicle is in a **Normal** condition or has a **Failure Risk**.
 
-## Objectives
+The trained Machine Learning model will later be integrated with a **FastAPI backend** and a **React frontend** to create an interactive web-based EV battery monitoring dashboard.
 
-- Analyze EV battery health using historical data.
-- Predict battery health and potential failure risk.
-- Apply Machine Learning for battery prediction.
-- Evaluate the model using Accuracy, Precision, Recall, and F1-Score.
-- Provide predictions through a user-friendly web application.
+> **Note:** This project is completely software-based. No Arduino, ESP32, IoT sensors, or physical battery hardware are required.
 
-## Technology Stack
+---
 
-### Machine Learning
-- Python
-- Pandas
-- NumPy
-- Scikit-learn
-- Jupyter Notebook
+## 🎯 Objectives
 
-### Backend
-- FastAPI
+- Analyze EV battery and vehicle parameters using Machine Learning.
+- Predict battery failure risk.
+- Monitor important battery parameters such as SoC, SoH, voltage, current, and temperature.
+- Provide an easy-to-use web dashboard.
+- Display battery health and failure-risk analytics.
+- Provide AI-based failure predictions.
+- Help identify potential battery-related problems at an early stage.
 
-### Frontend
-- React.js
-- HTML
-- CSS
-- JavaScript
+---
 
-### Dataset
-- EV Battery Health / Predictive Maintenance Dataset
-
-## Dataset
-
-The dataset is stored separately because of its large file size.
-
-[Download / Access Dataset](https://drive.google.com/drive/folders/1cRFmzwrAREaE-g6LdtkXo8LhXM3LLUdv?usp=drive_link)
-
-## Machine Learning Workflow
+## 🚗 Project Workflow
 
 ```text
-Dataset
-   ↓
-Data Cleaning
-   ↓
-Data Preprocessing
-   ↓
-Feature Selection
-   ↓
-Model Training
-   ↓
-Model Evaluation
-   ↓
-Battery Health / Failure Prediction
+EV Predictive Maintenance Dataset
+              ↓
+       Data Preprocessing
+              ↓
+      Feature Selection
+              ↓
+       Machine Learning
+              ↓
+   Failure Risk Prediction
+              ↓
+        Save ML Model
+              ↓
+        FastAPI Backend
+              ↓
+         React Frontend
+              ↓
+       EV Battery Dashboard
