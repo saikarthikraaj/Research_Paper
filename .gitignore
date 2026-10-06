@@ -1,1 +1,9 @@
-EV_ML_Training/saved_model/extra_trees_regression_model.pkl 
+EV_ML_Training/saved_model/extra_trees_regression_model.pkl
+EV_ML_Training/frontend/node_modules/
+EV_ML_Training/backend/venv/
+EV_ML_Training/venv/
+EV_ML_Training/frontend/.env
+EV_ML_Training/backend/.env
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
