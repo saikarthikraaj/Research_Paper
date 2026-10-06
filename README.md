@@ -1,6 +1,3 @@
-Yes bro 👍 This is a good **medium-length README** — not too short, not too long, and suitable for your GitHub academic project.
-
-```markdown
 # 🔋 AI-Based EV Battery Health Monitoring and Failure Prediction
 
 ## 📌 Overview
